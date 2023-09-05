@@ -9,7 +9,18 @@
 <body>
     <main>
         <h1>Iffy</h1>
-        <img src = "https://picsum.photos/id/343/200/300" alt = "image displayed because not github pages">
-    </main>
+        <script>
+            console.log('heelo')
+            console.log(window.location)
+            console.log(window.location.host)
+            const onGithub = window.location.host.includes('github.io')
+            console.log(onGithub)
+
+            if (onGithub) {
+                document.write('<img src = "https://picsum.photos/id/343/200/300" alt = "image displayed because ON github pages">')
+            } else {
+                document.write('<img src = "https://picsum.photos/id/343/200/300" alt = "image displayed because not github pages">')
+            }
+        </script>
 </body>
 </html>
